@@ -9,16 +9,18 @@ LunchCheckerController.$inject = ['$scope'];
 function LunchCheckerController($scope){
     
 	$scope.checkQuantity = function () {
-		$scope.errorMessage = "";
-		console.log("Error: "+$scope.errorMessage);
+		$scope.message = "";
+		console.log("Error: "+$scope.message);
 		console.log("List: "+$scope.menuList);
-		if ($scope.menuList!=""){			
+		if ($scope.menuList!="" && $scope.menuList!=undefined){			
 			if ($scope.menuList.split(',').length < 4) {
-				$scope.errorMessage = "Enjoy!";
+				$scope.message = "Enjoy!";
 
 			} else {
-				$scope.errorMessage = "Too Much!";
+				$scope.message = "Too Much!";
 			};
+		}else{
+			$scope.message = "Please enter data first";
 		};
 		
 	};
