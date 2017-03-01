@@ -1,0 +1,9 @@
+.greenMessage{
+	color: green;
+	border:1px solid green;
+}
+
+.redMessage{
+	color: red;
+	border:1px solid red;
+}
