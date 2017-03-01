@@ -12,7 +12,7 @@ function LunchCheckerController($scope){
 		$scope.message = "";
 		console.log("Error: "+$scope.message);
 		console.log("List: "+$scope.menuList);
-		if ($scope.menuList!="" && $scope.menuList!=undefined){			
+		if ($scope.menuList){			
 			if ($scope.menuList.split(',').length < 4) {
 				$scope.message = "Enjoy!";
 
