@@ -31,7 +31,11 @@ function AlreadyBoughtController(ShoppingListCheckOffService){
 function ShoppingListCheckOffService() {
 	var service = this;
 
-	service.toBuyItems = [{name: "cookies", quantity: 10 },{ name: "chips", quantity: 5 },{name: "chocolate", quantity: 4}];
+	service.toBuyItems = [{name: "cookies", quantity: 10 },
+							{ name: "chips", quantity: 5 },
+							{name: "chocolate", quantity: 4},
+							{ name: "brownies", quantity: 8 },
+							{name: "icecream", quantity: 4}];
    
 	service.boughtItems = [];
 
@@ -45,19 +49,11 @@ function ShoppingListCheckOffService() {
 	};
 
 	service.buyItemsIsEmpty = function () {
-		if (service.toBuyItems.length>0){
-			return true;
-		} else {
-			return false;
-		}
+		return (service.toBuyItems.length<1)
 	};
 
 	service.boughtItemsIsEmpty = function () {
-		if (service.boughtItems.length>0){
-			return true;
-		} else {
-			return false;
-		}
+		return (service.boughtItems.length<1)
 	};
 
 }
