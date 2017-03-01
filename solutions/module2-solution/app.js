@@ -12,11 +12,12 @@ function ToBuyController(ShoppingListCheckOffService){
 	var buyList = this;
 
 	buyList.items = ShoppingListCheckOffService.toBuyItems;
+	console.log("Yes");
 
 	buyList.buyItem = function(itemIndex) {
-		console.log("Yes")
+		console.log("Yes 2");
 		ShoppingListCheckOffService.buyItem(itemIndex);
-	}
+	};
 
 
 }
@@ -37,11 +38,14 @@ function ShoppingListCheckOffService() {
 	service.boughtItems = [];
 
 	service.buyItem = function (itemIndex) {
+
+		console.log("Yes");
+
 		var item = service.toBuyItems.splice(itemIndex, 1);
 
-		console.log(item);
+		console.log(item[0]);
 
-		service.boughtItems.push(item);
+		service.boughtItems.push(item[0]);
 	};
 
 }
