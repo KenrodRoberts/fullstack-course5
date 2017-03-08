@@ -18,6 +18,7 @@ function ToBuyController(ShoppingListCheckOffService){
 	buyList.isEmpty = ShoppingListCheckOffService.buyItemsIsEmpty;
 }
 
+
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService']
 function AlreadyBoughtController(ShoppingListCheckOffService){
 	var boughtList = this;
