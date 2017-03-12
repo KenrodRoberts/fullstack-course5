@@ -1,6 +1,6 @@
 <p class="col-xs-12 text-center alert alert-info" role="alert" ng-if="(list.isEmpty());"><strong>Nothing found</strong></p>
 
-<table class="col-xs-12" ng-if="(!(list.foundItems==undefined));">
+<table class="col-xs-12" ng-if="((!(list.foundItems==undefined)) && !(list.isEmpty()));">
     <tr>
       <th class="col-xs-2">Short Name</th>
       <th class="col-xs-3">Name</th>
