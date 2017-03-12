@@ -1,0 +1,16 @@
+<p class="col-xs-12 text-center alert alert-info" role="alert" ng-if="(list.isEmpty());"><strong>Nothing found</strong></p>
+
+<table class="col-xs-12" ng-if="(!(list.foundItems==undefined));">
+    <tr>
+      <th class="col-xs-2">Short Name</th>
+      <th class="col-xs-3">Name</th>
+      <th class="col-xs-5">Description</th>
+      <th class="col-xs-2"></th>
+    </tr>
+    <tr ng-repeat = "menuItem in list.foundItems">
+      <td class="text-center">{{menuItem.short_name}}</td>
+      <td>{{menuItem.name}}</td>
+      <td>{{menuItem.description}}</td>       
+      <td><button class="btn btn-xs" ng-click="list.onRemove({index: $index});">Don't want this one!</button></td>
+    </tr>
+</table>
