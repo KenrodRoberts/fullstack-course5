@@ -1,0 +1,13 @@
+<div class="btn-grp center-block" role="group" aria-label="nav">
+	<button type="button" class="btn btn-default" ui-sref="home">Home</button>
+	<button type="button" class="btn btn-default" ui-sref="categories">Menu Categories</button>
+</div>
+<div ng-if="!(itemsList.isEmpty())">
+	<h3>{{itemsList.categoryName}} Menu</h3>
+	<items items="itemsList.items"></items>
+</div>
+<div ng-if="(itemsList.isEmpty())">
+	<h3>No items found</h3>
+</div>
+<button class="btn btn-default center-block" ui-sref="categories">Go back to Menu Categories</button>
+

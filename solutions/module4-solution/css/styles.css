@@ -1,0 +1,22 @@
+body {
+  font-size: 1.2em;
+}
+
+.activeTab {
+  font-weight: bold;
+}
+
+.container{
+	padding-bottom: 30px;
+}
+
+.btn-grp{
+	overflow: auto;
+	display:block;
+	margin-bottom: 20px;
+	width:199px;
+}
+
+/*button.btn.btn-default.active{
+	background-color: #3bc2ff;
+}*/
